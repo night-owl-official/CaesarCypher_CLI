@@ -42,5 +42,20 @@ def decrypt(encrypted_text, shift_amount):
     print(f"Decrypted Text: {decrypted_text}")
 
 
+def caesar(direction, text, shift):
+    """
+    Main function to handle encryption and decryption based on direction.
+    """
+
+    direction_lower = direction.lower()
+
+    if direction_lower == "encrypt" or direction_lower == "e":
+        encrypt(text, shift)
+    elif direction_lower == "decrypt" or direction_lower == "d":
+        decrypt(text, shift)
+    else:
+        print("Invalid direction! Use 'encrypt (e)' or 'decrypt (d)'.")
+
+
 encrypt("Hello, World!", 20) # Example usage
 decrypt("Byffi, Qilfx!", 20) # Example usage
